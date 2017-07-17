@@ -12,7 +12,6 @@ export default class Todolist extends React.Component{
         );
     }
     render(){ 
-              console.log(this.props.todo);
         return(
         <div>
             <table style={{border:"1px solid black"}}>

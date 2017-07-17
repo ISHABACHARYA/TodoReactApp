@@ -32,7 +32,7 @@ class App extends Component {
       this.state.todo.push({
         task:task,
         time:time,
-        incompleted: false
+        iscompleted: false
       });
       this.setState({todos:this.state.todos});
     }

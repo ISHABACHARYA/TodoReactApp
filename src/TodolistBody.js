@@ -31,12 +31,27 @@ export default class TodolistBody extends React.Component{
                  isEditing:false,
              })
          }   
+        taskSection(){
+            const {time,task,iscompleted} = this.props.todos;//destructuring the object using ES6 property
+            const taskstyle={
+                color : iscompleted ? 'green' :'red',
+                cursor: 'pointer',
+
+            };
+           return(
+                 <td style={taskstyle} onClick={()=>this.taskredefine(task)}>{this.props.todos.task}</td>
+           );
+        }
+
+        taskredefine(task){
+            
+        }
 
     render(){
         return(
                 <tr>
                     <td>{this.props.todos.time}</td>
-                    <td>{this.props.todos.task}</td>
+                     {this.taskSection()}
                     {this.actionPerformed()}
                 </tr>
         );
